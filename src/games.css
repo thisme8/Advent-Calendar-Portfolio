@@ -1,0 +1,318 @@
+/* --------------------------------------------------------------------------Game Page------------------------------------------------------------------------------------------------------- */
+
+body {
+  background-image: url(img/img16.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1 {
+  font-family: cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 40px;
+  color: rgb(255, 238, 217);
+  margin-left: 15px;
+}
+
+.header-container {
+  align-items: normal;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.header {
+  background-image: url("img/img16.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 13vh;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  display: flex;
+}
+
+.logo-img {
+  text-wrap: wrap;
+  border-radius: 50%;
+  border-color: rgb(4, 4, 55);
+  border-width: 2px;
+  opacity: 1;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 15vh;
+  column-gap: 7vw;
+  width: 70%;
+  height: 90%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game-card {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 60%;
+  width: 40%;
+  border-radius: 7px;
+  background-color: rgba(250, 235, 215, 0.557);
+  color: black;
+  align-items: center;
+  text-align: center;
+}
+
+#game-card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: ease all 0.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("src/img18.png");
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(180deg);
+  /* #form-first {
+    color: rgb(4, 4, 55);
+    border-color: rgb(4, 4, 55);
+    background-color: bisque;
+    height: 10%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+   }
+  #form-second {
+    color: rgb(4, 4, 55);
+    border-color: rgb(4, 4, 55);
+    background-color: bisque;
+    height: 10%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+}
+
+form {
+  color: rgb(4, 4, 55);
+  border-width: medium;
+  border-color: rgb(4, 4, 55);
+  background-color: rgba(223, 202, 176, 0.76);
+  height: 10%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  padding: 3px;
+  content: icon;
+  border: 2px solid rgb(4, 4, 55);
+  font-size: 18px;
+}
+
+.image {
+  height: 90%;
+  width: 90%;
+  margin-right: 2%;
+  margin-left: 5%;
+  object-fit: fill;
+  &.img-i {
+    background-image: url("img/game1.png");
+    background-repeat: no-repeat;
+  }
+  &.img-ii {
+    background-image: url("img/game2.png");
+    background-repeat: no-repeat;
+  }
+  &.img-iii {
+    background-image: url("img/game3.png");
+    background-repeat: no-repeat;
+  }
+  &.img-iv {
+    background-image: url("img/game4.png");
+    background-repeat: no-repeat;
+  }
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(4, 4, 55);
+  background-color: rgba(223, 202, 176, 0.76);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+tr,
+td {
+  text-align: center;
+  border: 1px solid rgb(4, 4, 55);
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 55%;
+}
+
+.footer-container {
+  text-align: center;
+  width: 100vw;
+  height: 5vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 100%;
+  padding: 5px 0;
+  background-color: rgba(255, 238, 217, 0.443);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* --------------------------------------------------------------------------Game buttons------------------------------------------------------------------------------------------------------- */
+
+#rps-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#mm-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#ttt-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#me-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/* --------------------------------------------------------------------------RPS buttons------------------------------------------------------------------------------------------------------- */
+
+#shoot-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-top: auto;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: auto;
+}
+
+#rpt-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#rpf-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#restart-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#return-btn {
+  border-radius: 3px;
+  background-color: rgb(4, 4, 55);
+  color: antiquewhite;
+  text-align: center;
+  height: 5vh;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
