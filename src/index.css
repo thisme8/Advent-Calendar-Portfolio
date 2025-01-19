@@ -56,8 +56,30 @@ p {
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 1500px;
-  transition: transform 0.6s ease all;
+  transition: transform 0.3s ease all;
   transform: rotateY(0deg);
+}
+
+/* Locked Veil */
+.card-locked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent gray overlay */
+  z-index: 10;
+  pointer-events: none;
+  /* Ensure overlay doesn't block clicks */
+  transition: opacity 0.3s ease;
+}
+
+/* Remove Veil for Unlocked Cards */
+.card-unlocked .card-locked::before {
+  opacity: 0;
+  /* Fade out the overlay */
 }
 
 .cover,
@@ -82,7 +104,7 @@ p {
   visibility: hidden;
   opacity: 0;
   transform: rotateY(-180deg);
-  transition: visibility 0s 0.6s, opacity 0.6s ease-in-out;
+  transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
 }
 
 .card.show-back .card-back {
@@ -92,8 +114,6 @@ p {
 }
 
 .card.show-back .cover {
-  /* opacity: 1;
-  visibility: hidden; */
   transform: rotateY(-180deg);
 }
 
