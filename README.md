@@ -7,9 +7,9 @@ Features
 Interactive Design: Unlock cards to explore my academic and professional achievements.
 
 Mini-Games:
-Tic-Tac-Toe
-Rock-Paper-Scissors
-Memory Map Game
+Tic-Tac-Toe,
+Rock-Paper-Scissor,
+Memory Map Game,
 Magic 8-Ball
 
 Time-Locked Cards: Cards can only be accessed after a specified time interval (1 minute).
