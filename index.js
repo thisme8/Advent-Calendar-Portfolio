@@ -47,6 +47,88 @@ function lockCard(card, index) {
   if (lockIndicator) lockIndicator.textContent = "🔐";
 }
 
+const cardContent = [
+  {
+    title: "INTRODUCTION",
+    layout: `
+      <div style="text-align: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"INTRODUCTION"}</h2>
+        <p>Name: Stuti Upreti</p>
+        <br>
+        <p>Location: Kathmandu, Nepal</p>
+        <br>
+        <p>Major: Computer Engineering</p>
+        <br>
+        <p>College: Himalaya College Of Engineering</p>
+      </div>`,
+  },
+  {
+    title: "ALMA MATER",
+    layout: `
+      <div style="text-align: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"ALMA MATER"}</h2>
+        <ul>
+          <li><p>Himalaya College Of Engineering (2021-2025)</p></li>
+          <br>
+          <li><p>St. Mary's High School (2018-2020)</p></li>
+          <br>
+          <li><p>St. Mary's Secondary School (2008-2018)</p></li>
+        </ul>
+      </div>`,
+  },
+  {
+    title: "SKILLS",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"SKILLS"}</h2>
+        <table style="border : 2px solid rgb(4, 4, 55); text-align:center; margin:5px">
+        <tr>
+        <th style="border : 2px solid rgb(4, 4, 55)">Programming Languages</th>
+        </tr>
+          <tr><td>Python</td></tr>
+          <tr><td>JavaScript</td></tr>
+          <tr><td>HTML</td></tr>
+          <tr><td>CSS</td></tr>
+          <tr><td>C Programming</td></tr>
+          <tr><td>C++</td></tr>
+          <tr><td>SQL</td></tr>
+          <tr><td>Dart</td></tr>
+        </table>
+        
+      </div>`,
+  },
+  {
+    title: "TOOLS AND FRAMEWORKS",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"TOOLS AND FRAMEWORKS"}</h2>
+        <table style="border : 2px solid rgb(4, 4, 55); text-align:center; margin:5px">
+        <tr>
+        <th style="border : 2px solid rgb(4, 4, 55)">Tools and Frameworks</th>
+        </tr>
+          <tr><td>MongoDB</td></tr>
+          <tr><td>Express.js</td></tr>
+          <tr><td>React</td></tr>
+          <tr><td>Node.js</td></tr>
+          <tr><td>Flask</td></tr>
+          <tr><td>Django</td></tr>
+          <tr><td>TensorFlow </td></tr>
+          <tr><td>PyTorch</td></tr>
+        </table>
+        
+      </div>`,
+  },
+  {
+    title: "RESUME",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"RESUME"}</h2>
+        
+        <iframe src="src/resume.pdf" type="pdf" width="350px" height="350px"></iframe>
+      </div>`,
+  },
+];
+
 cardEl.forEach((card, index) => {
   //   for locking and unlocking card without event listener
   function checkAndUnlock() {
@@ -145,9 +227,53 @@ cardEl.forEach((card, index) => {
           console.log(
             `Please wait ${remainingTime} more seconds(s) to open card ${index}.`
           );
-          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index}.`;
+          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index}.
+                                  Meanwhile, Would you like to play some fun games 
+                                  <a href="#section" 
+                                     style="color:rgb(4, 4, 55);
+                                     font-weight: bold;
+                                  ">
+                                     Here</a>?`;
         }
       }
     }
+    const glideEl = card.querySelector(".glide-btn");
+    const overlayEl = document.getElementById("overlay");
+    const glideCardEl = document.getElementById("glide-card");
+    // Show the glide card on button click
+    // Show the glide card on button click
+    glideEl.addEventListener("click", () => {
+      overlayEl.classList.remove("hidden");
+      const selectedContent = cardContent[index];
+      glideCardEl.innerHTML = `<div
+                                  style="
+                                    height: 600px;
+                                    width: 600px;
+                                    border-radius: 2%;
+                                    border: 2px double black;
+                                    background-color: #ffeed971;
+                                  "
+                                     >
+                                  <div
+                                    style="
+                                      height: 500px;
+                                      width: 500px;
+                                      border-radius: 2%;
+                                      border: 2px double black;
+                                      background-color: rgba(179, 108, 21, 0.46);
+                                      margin: 50px 50px;
+                                    "
+                                  >
+                                    <p>${selectedContent.layout}</p>
+                                  </div>
+                               </div>`;
+    });
+
+    // Hide the glide card when clicking outside the card
+    overlayEl.addEventListener("click", (event) => {
+      if (event.target === overlayEl) {
+        overlayEl.classList.add("hidden");
+      }
+    });
   });
 });
