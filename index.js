@@ -1,4 +1,22 @@
 let cardEl = document.querySelectorAll(".card");
+let messageEl = document.getElementById("alert-message");
+
+//function for recording rendering time
+function advent() {
+  let entryTime = Date.now();
+  console.log(entryTime);
+  localStorage.setItem("firstEntry", entryTime);
+  if (localStorage.getItem("cardState0") != "true") {
+    messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
+  } else {
+    messageEl.innerHTML = `<div>
+                            <img src= src/img/img18.png
+                                style = "height:50px; width:50px; border-radius:50%"
+                            >
+                           </div>`;
+  }
+}
+advent();
 
 // function for saving card's lock state
 function saveCardLock(index, lock) {
@@ -7,6 +25,7 @@ function saveCardLock(index, lock) {
 
 // function for acquiring card's lock state
 function getCardLock(index) {
+  console.log(localStorage.getItem(`cardLock${index}`));
   return localStorage.getItem(`cardLock${index}`);
 }
 
@@ -30,32 +49,38 @@ function lockCard(card, index) {
 
 cardEl.forEach((card, index) => {
   //   for locking and unlocking card without event listener
+  function checkAndUnlock() {
+    let currentTime = Date.now();
+    let coolDownTime = index * 30 * 1000;
+    let elapsedTime =
+      currentTime - JSON.parse(localStorage.getItem("lastOpenTime0"));
 
-  let currentTime = Date.now();
-  let lastOpenTimeKey = `lastOpenTime${index}`;
-  let lastOpenTime = JSON.parse(localStorage.getItem(lastOpenTimeKey) || "0");
-
-  let coolDownTime = index * 5 * 1000;
-  let elapsedTime = currentTime - lastOpenTime;
-
-  let lockedEl = card.getElementsByClassName("card-unlocked");
-
-  // condition for changing card's lock state
-  let lockState = getCardLock(index);
-  if (index === 0 || getCardLock(index) === "unlocked") {
-    unlockCard(card, index);
-  } else {
-    if (elapsedTime >= coolDownTime) {
+    // condition for changing card's lock state
+    let lockState = getCardLock(index);
+    if (index === 0 || lockState === "unlocked") {
       unlockCard(card, index);
     } else {
-      lockCard(card, index);
+      if (
+        elapsedTime >= coolDownTime &&
+        localStorage.getItem("cardState0") === "true"
+      ) {
+        unlockCard(card, index);
+      } else {
+        lockCard(card, index);
+      }
     }
   }
+  setInterval(checkAndUnlock, 100);
 
   card.addEventListener("click", function () {
     let currentTime = Date.now();
     const cardKey = `cardState${index}`;
     const cardBackEl = card.querySelector(".card-back");
+    messageEl.innerHTML = `<div>
+                            <img src= src/img/img18.png
+                                style = "height:50px; width:50px; border-radius:50%"
+                            >
+                           </div>`;
 
     // if an already opened card has been clicked
     if (localStorage.getItem(cardKey) === "true") {
@@ -85,7 +110,7 @@ cardEl.forEach((card, index) => {
       let lastOpenTime = JSON.parse(
         localStorage.getItem("lastOpenTime0") || "0"
       );
-      let coolDownTime = index * 5 * 1000;
+      let coolDownTime = index * 30 * 1000;
 
       let elapsedTime = currentTime - lastOpenTime;
 
@@ -96,7 +121,6 @@ cardEl.forEach((card, index) => {
 
         cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
         card.classList.toggle("show-back");
-        unlockCard(card, index);
         console.log("Card 0 opened for the first time");
       } else {
         // Check if enough time has passed (e.g., `index` minutes since last open)
@@ -109,71 +133,21 @@ cardEl.forEach((card, index) => {
           localStorage.setItem(cardKey, "true");
 
           cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
+          unlockCard(card, index);
 
           card.classList.toggle("show-back");
-          unlockCard(card, index);
           console.log(`Card ${index} opened after waiting.`);
         } else {
           // if the card has not reached the required coolDown time
 
-          const remainingTime = Math.ceil(
-            (coolDownTime - elapsedTime) / 1000 / 60
-          );
+          const remainingTime = Math.ceil((coolDownTime - elapsedTime) / 1000);
           lockCard(card, index);
           console.log(
-            `Please wait ${remainingTime} more minute(s) to open card ${index}.`
+            `Please wait ${remainingTime} more seconds(s) to open card ${index}.`
           );
+          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index}.`;
         }
       }
     }
   });
 });
-
-//   if (index === 0) {
-//     Minutes = currentTime.getMinutes(index);
-//     localStorage.setItem("Minutes", Minutes);
-
-//     card.classList.toggle("show-back");
-//     console.log(localStorage.getItem(Minutes));
-//   } else {
-//     Minutes = currentTime.getMinutes(index);
-//     if (Minutes >= currentTime.getMinutes(index[0]) + 1) {
-//       card.classList.toggle("show-back");
-//       localStorage.setItem("Minutes", Minutes);
-//       console.log(localStorage.getItem(Minutes));
-//     }
-//   }
-
-//   if (index === 0) {
-//     Minute = currentTime.getMinutes();
-//     card.classList.toggle("show-back");
-//     cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
-
-//     localStorage.setItem("Minute", Minute);
-//     localStorage.setItem(cardKey, "true");
-
-//     console.log(localStorage.getItem(`Minutes${index}`));
-//     console.log("card is being opened for the first time");
-//   } else {
-//     let Minutes = currentTime.getMinutes();
-//     if (
-//       Minutes === parseInt(localStorage.getItem(Minute)) + index ||
-//       Minutes > parseInt(localStorage.getItem(Minute)) + index
-//     ) {
-//       card.classList.toggle("show-back");
-//       cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
-
-//       localStorage.setItem(`Minutes${index}`, Minutes);
-//       localStorage.setItem(cardKey, "true");
-
-//       console.log(localStorage.getItem(`Minutes${index}`));
-//       console.log("card is being opened for the first time");
-//     } else {
-//       console.log(`please wait ${index} minutes`);
-//     }
-//   }
-
-// const glideEl = card.querySelector(".glide-btn");
-// glideEl.addEventListener("click", function () {
-//   console.log("glide button pressed");
-// });
