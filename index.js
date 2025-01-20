@@ -17,6 +17,14 @@ function advent() {
                            </div>`;
   }
   timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+  let originalTimeContent = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+  localStorage.setItem("original", originalTimeContent);
+  timeEl.addEventListener("click", function () {
+    for (let i = 0; i < 12; i++) {
+      localStorage.setItem(`cardState${i}`, true);
+      localStorage.setItem(`cardLock${i}`, "unlocked");
+    }
+  });
 }
 advent();
 
@@ -402,7 +410,7 @@ cardEl.forEach((card, index) => {
                                     </p>
                                       <button class="glide-btn">SHOW</button>
                                   </div>
-`;
+                                  `;
         card.classList.toggle("show-back");
         console.log("Card 0 opened for the first time");
       } else {
@@ -425,7 +433,7 @@ cardEl.forEach((card, index) => {
                                     </p>
                                       <button class="glide-btn">SHOW</button>
                                   </div>
-`;
+                                  `;
           unlockCard(card, index);
 
           card.classList.toggle("show-back");
@@ -454,10 +462,16 @@ cardEl.forEach((card, index) => {
                                      font-weight: bold;
                                   ">
                                      Here</a>?`;
+            timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
+                                <div><i class="fas fa-clock fa-3x"></i></div>`;
+            setTimeout(() => {
+              timeEl.innerHTML = localStorage.getItem("original");
+            }, 5000);
           }
         }
       }
     }
+
     const glideEl = card.querySelector(".glide-btn");
     const overlayEl = document.getElementById("overlay");
     const glideCardEl = document.getElementById("glide-card");
