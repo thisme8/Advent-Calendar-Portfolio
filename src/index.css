@@ -49,6 +49,20 @@ p {
   animation: slide-in 0.5s ease-out;
 }
 
+#time-btn {
+  position: fixed;
+  margin-top: 2px;
+  right: 44px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 238, 217, 0.443);
+  padding: 20px 15px;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -114,6 +128,10 @@ p {
   background-image: url("img/img18.png");
   background-size: cover;
   border: 2px solid #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   visibility: hidden;
   opacity: 0;
@@ -204,13 +222,13 @@ p {
   color: black;
   font-weight: bold;
   text-align: center;
-  height: 15%;
-  width: 50%;
+  height: 50px;
+  width: 150px;
   padding: 0px;
-  margin-top: 30%;
-  margin-bottom: 10%;
+  margin-top: 15%;
+  margin-bottom: auto;
   margin-left: 25%;
-  margin-right: 20%;
+  margin-right: 25%;
 }
 
 .glide-card {

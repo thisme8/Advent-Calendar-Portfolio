@@ -1,5 +1,6 @@
 let cardEl = document.querySelectorAll(".card");
 let messageEl = document.getElementById("alert-message");
+let timeEl = document.getElementById("time-btn");
 
 //function for recording rendering time
 function advent() {
@@ -15,6 +16,7 @@ function advent() {
                             >
                            </div>`;
   }
+  timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
 }
 advent();
 
@@ -170,6 +172,146 @@ const cardContent = [
         
       </div>`,
   },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
+      </div>`,
+  },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
+      </div>`,
+  },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
+      </div>`,
+  },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
+      </div>`,
+  },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
+      </div>`,
+  },
 ];
 
 cardEl.forEach((card, index) => {
@@ -226,6 +368,10 @@ cardEl.forEach((card, index) => {
                                     
                                     <br/>
                                     
+                                    <p style="color:rgb(4, 4, 55); font-weight:bold; font-size: 20px; ">${selectedContent.title}</p>
+                                    
+                                    <br/>
+                                    
                                     <button class = "glide-btn">SHOW</button>
                                 </div>`;
       unlockCard(card, index);
@@ -246,7 +392,17 @@ cardEl.forEach((card, index) => {
         localStorage.setItem(lastOpenTimeKey, currentTime);
         localStorage.setItem(cardKey, "true");
 
-        cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
+        cardBackEl.innerHTML = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                                    <p style="
+                                        color: rgb(4, 4, 55); 
+                                        font-size: 20px; 
+                                        font-weight: bold; 
+                                        font-family: Arial, sans-serif;">
+                                        ${selectedContent.title}
+                                    </p>
+                                      <button class="glide-btn">SHOW</button>
+                                  </div>
+`;
         card.classList.toggle("show-back");
         console.log("Card 0 opened for the first time");
       } else {
@@ -259,7 +415,17 @@ cardEl.forEach((card, index) => {
           localStorage.setItem(lastOpenTimeKey, currentTime);
           localStorage.setItem(cardKey, "true");
 
-          cardBackEl.innerHTML = `<button class = "glide-btn">SHOW</button>`;
+          cardBackEl.innerHTML = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                                    <p style="
+                                        color: rgb(4, 4, 55); 
+                                        font-size: 20px; 
+                                        font-weight: bold; 
+                                        font-family: Arial, sans-serif;">
+                                        ${selectedContent.title}
+                                    </p>
+                                      <button class="glide-btn">SHOW</button>
+                                  </div>
+`;
           unlockCard(card, index);
 
           card.classList.toggle("show-back");
@@ -272,13 +438,23 @@ cardEl.forEach((card, index) => {
           console.log(
             `Please wait ${remainingTime} more seconds(s) to open card ${index}.`
           );
-          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
+          if (remainingTime <= 0) {
+            messageEl.innerHTML = `Firstly, please open the card 0 to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
                                   Meanwhile, Would you like to play some fun games 
                                   <a href="#section" 
                                      style="color:rgb(4, 4, 55);
                                      font-weight: bold;
                                   ">
                                      Here</a>?`;
+          } else {
+            messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
+                                  Meanwhile, Would you like to play some fun games 
+                                  <a href="#section" 
+                                     style="color:rgb(4, 4, 55);
+                                     font-weight: bold;
+                                  ">
+                                     Here</a>?`;
+          }
         }
       }
     }
