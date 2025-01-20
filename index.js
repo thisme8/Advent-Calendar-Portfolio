@@ -51,28 +51,33 @@ const cardContent = [
   {
     title: "INTRODUCTION",
     layout: `
-      <div style="text-align: center;">
+      <div  style="display: flex; flex-direction: column; align-items: center;">
         <h2 style="color:rgb(4, 4, 55)">${"INTRODUCTION"}</h2>
-        <p>Name: Stuti Upreti</p>
+        <div class="glide-box">Name: Stuti Upreti</div>
         <br>
-        <p>Location: Kathmandu, Nepal</p>
         <br>
-        <p>Major: Computer Engineering</p>
+        <div class="glide-box">Location: Kathmandu, Nepal</div>
         <br>
-        <p>College: Himalaya College Of Engineering</p>
+        <br>
+        <div class="glide-box">Major: Computer Engineering</div>
+        <br>
+        <br>
+        <div class="glide-box">College: Himalaya College Of Engineering</div>
       </div>`,
   },
   {
     title: "ALMA MATER",
     layout: `
-      <div style="text-align: center;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
         <h2 style="color:rgb(4, 4, 55)">${"ALMA MATER"}</h2>
-        <ul>
-          <li><p>Himalaya College Of Engineering (2021-2025)</p></li>
+        <ul style="text-align:center; margin:5px">
+          <li class="glide-box">Himalaya College Of Engineering (2021-2025)</li>
           <br>
-          <li><p>St. Mary's High School (2018-2020)</p></li>
           <br>
-          <li><p>St. Mary's Secondary School (2008-2018)</p></li>
+          <li class="glide-box">St. Mary's High School (2018-2020)</li>
+          <br>
+          <br>
+          <li class="glide-box">St. Mary's Secondary School (2008-2018)</li>
         </ul>
       </div>`,
   },
@@ -81,19 +86,16 @@ const cardContent = [
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
         <h2 style="color:rgb(4, 4, 55)">${"SKILLS"}</h2>
-        <table style="border : 2px solid rgb(4, 4, 55); text-align:center; margin:5px">
-        <tr>
-        <th style="border : 2px solid rgb(4, 4, 55)">Programming Languages</th>
-        </tr>
-          <tr><td>Python</td></tr>
-          <tr><td>JavaScript</td></tr>
-          <tr><td>HTML</td></tr>
-          <tr><td>CSS</td></tr>
-          <tr><td>C Programming</td></tr>
-          <tr><td>C++</td></tr>
-          <tr><td>SQL</td></tr>
-          <tr><td>Dart</td></tr>
-        </table>
+        
+          <div class="glide-box">Python</div>
+          <div class="glide-box">JavaScript</div>
+          <div class="glide-box">HTML</div>
+          <div class="glide-box">CSS</div>
+          <div class="glide-box">C Programming</div>
+          <div class="glide-box">C++</div>
+          <div class="glide-box">SQL</div>
+          <div class="glide-box">Dart</div>
+        
         
       </div>`,
   },
@@ -102,19 +104,32 @@ const cardContent = [
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
         <h2 style="color:rgb(4, 4, 55)">${"TOOLS AND FRAMEWORKS"}</h2>
-        <table style="border : 2px solid rgb(4, 4, 55); text-align:center; margin:5px">
-        <tr>
-        <th style="border : 2px solid rgb(4, 4, 55)">Tools and Frameworks</th>
-        </tr>
-          <tr><td>MongoDB</td></tr>
-          <tr><td>Express.js</td></tr>
-          <tr><td>React</td></tr>
-          <tr><td>Node.js</td></tr>
-          <tr><td>Flask</td></tr>
-          <tr><td>Django</td></tr>
-          <tr><td>TensorFlow </td></tr>
-          <tr><td>PyTorch</td></tr>
-        </table>
+
+          <div class="glide-box">MongoDB</div>
+          <div class="glide-box">Express.js</div>
+          <div class="glide-box">React</div>
+          <div class="glide-box">Node.js</div>
+          <div class="glide-box">Flask</div>
+          <div class="glide-box">Django</div>
+          <div class="glide-box">TensorFlow </div>
+          <div class="glide-box">PyTorch</div>
+        
+        
+      </div>`,
+  },
+  {
+    title: "SOFT SKILLS",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"SOFT SKILLS"}</h2>
+      
+         <div class="glide-box">Creativity</div>
+         <div class="glide-box">Communication Skills</div>
+         <div class="glide-box">Teamwork and Collaboration</div>
+         <div class="glide-box">Time Management</div>
+         <div class="glide-box">Interpersonal Skills</div>
+         <div class="glide-box">Emotional Intelligence (EQ)</div>
+   
         
       </div>`,
   },
@@ -124,7 +139,35 @@ const cardContent = [
       <div style="display: flex; flex-direction: column; align-items: center;">
         <h2 style="color:rgb(4, 4, 55)">${"RESUME"}</h2>
         
-        <iframe src="src/resume.pdf" type="pdf" width="350px" height="350px"></iframe>
+        <iframe src="src/resume.pdf" type="pdf" width="500px" height="550px"></iframe>
+      </div>`,
+  },
+  {
+    title: "CONTACT INFO",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        
+        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
+        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
+        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        </div>
+        <br>
+        <br>
+        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
+        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        </div>
+        
+        
       </div>`,
   },
 ];
@@ -153,6 +196,8 @@ cardEl.forEach((card, index) => {
     }
   }
   setInterval(checkAndUnlock, 100);
+
+  const selectedContent = cardContent[index];
 
   card.addEventListener("click", function () {
     let currentTime = Date.now();
@@ -227,7 +272,7 @@ cardEl.forEach((card, index) => {
           console.log(
             `Please wait ${remainingTime} more seconds(s) to open card ${index}.`
           );
-          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index}.
+          messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
                                   Meanwhile, Would you like to play some fun games 
                                   <a href="#section" 
                                      style="color:rgb(4, 4, 55);
@@ -244,11 +289,10 @@ cardEl.forEach((card, index) => {
     // Show the glide card on button click
     glideEl.addEventListener("click", () => {
       overlayEl.classList.remove("hidden");
-      const selectedContent = cardContent[index];
       glideCardEl.innerHTML = `<div
                                   style="
-                                    height: 600px;
-                                    width: 600px;
+                                    height: 800px;
+                                    width: 700px;
                                     border-radius: 2%;
                                     border: 2px double black;
                                     background-color: #ffeed971;
@@ -256,8 +300,8 @@ cardEl.forEach((card, index) => {
                                      >
                                   <div
                                     style="
-                                      height: 500px;
-                                      width: 500px;
+                                      height: 700px;
+                                      width: 600px;
                                       border-radius: 2%;
                                       border: 2px double black;
                                       background-color: rgba(179, 108, 21, 0.46);
