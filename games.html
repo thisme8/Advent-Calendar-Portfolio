@@ -3,6 +3,10 @@
     <title>GAMES</title>
     <link rel="icon" type="image/png" href="src/img/logo.ico" />
     <link rel="stylesheet" href="src/games.css" />
+     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -21,26 +25,40 @@
       </div>
     </div>
 
+    <a href="index.html" style="color:black">
+      <div id="calendar-btn">
+          <i class="fas fa-calendar fa-3x"></i>
+          <p>Back to Advent</p>
+      </div>
+    </a>
+
     <div class="game-container">
-      <div id="game-card">
+     
+     
+     <div class="game-card">
+      <div id="game-card-rps"></div> 
         <div class="image img-i"></div>
         <button id="rps-btn">PLAY</button>
       </div>
 
-      <div id="game-card">
+      <div class="game-card">
+        <div id="game-card-mm"></div> 
         <div class="image img-ii"></div>
         <button id="mm-btn">PLAY</button>
       </div>
-
-      <div id="game-card">
+      
+      <div class="game-card">
+        <div id="game-card-ttt"></div> 
         <div class="image img-iii"></div>
         <button id="ttt-btn">PLAY</button>
       </div>
 
-      <div id="game-card">
+      <div class="game-card">
+        <div id="game-card-me"></div> 
         <div class="image img-iv"></div>
         <button id="me-btn">PLAY</button>
       </div>
+      
     </div>
 
     <div class="footer-container">
@@ -48,5 +66,8 @@
     </div>
 
     <script src="rock_paper_scissors.js"></script>
+    <script src="magic_eight.js"></script>
+    <script src="mem_mat.js"></script>
+  </body>
   </body>
 </html>

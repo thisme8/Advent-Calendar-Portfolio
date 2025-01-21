@@ -271,17 +271,13 @@ p {
   z-index: 2000;
 }
 @keyframes spinAndAppear {
-  0% {
+  from {
     transform: scale(0) rotate(0deg);
     opacity: 0;
   }
-  50% {
+  to {
     transform: scale(1.1) rotate(180deg);
     opacity: 0.5;
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-    opacity: 1;
   }
 }
 

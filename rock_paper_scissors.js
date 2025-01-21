@@ -1,17 +1,18 @@
 let hands = ["🪨", "📄", "✂️"];
 let firstHand = 0;
 let secondHand = 0;
-let gameCardEl = document.getElementById("game-card");
+let gameCardRps = document.querySelectorAll(".game-card");
+let rockPaperScissors = gameCardRps[0];
 let rpsEl = document.getElementById("rps-btn");
 let message = "";
 let count1 = 0;
 let count2 = 0;
 let i = 0;
 
-function play() {
+function playRps() {
   count1 = 0;
   count2 = 0;
-  gameCardEl.innerHTML = `<form>${" First Hand "}</form>
+  rockPaperScissors.innerHTML = `<form>${" First Hand "}</form>
                         <form>${" Second Hand "}</form>
                         <p>${" "}</p>
                         <table>
@@ -63,7 +64,7 @@ function shoot() {
     The Second Hand wins this round`;
     count2 += 1;
     count1 = count1;
-    gameCardEl.innerHTML = `<form>${hands[firstHand]}</form>
+    rockPaperScissors.innerHTML = `<form>${hands[firstHand]}</form>
                         <form>${hands[secondHand]}</form>
                         <p>${[message]}</p>
                         <table>
@@ -85,7 +86,7 @@ function shoot() {
     There are no winners or losers`;
     count1 = count1;
     count2 = count2;
-    gameCardEl.innerHTML = `<form>${hands[firstHand]}</form>
+    rockPaperScissors.innerHTML = `<form>${hands[firstHand]}</form>
                         <form>${hands[secondHand]}</form>
                         <p>${[message]}</p>
                         <table>
@@ -107,7 +108,7 @@ function shoot() {
     The First Hand wins this round `;
     count1 += 1;
     count2 = count2;
-    gameCardEl.innerHTML = `<form>${hands[firstHand]}</form>
+    rockPaperScissors.innerHTML = `<form>${hands[firstHand]}</form>
                         <form>${hands[secondHand]}</form>
                         <p>${message}</p>
                         <table>
@@ -133,7 +134,7 @@ function shoot() {
     });
   } else {
     if (count1 > count2) {
-      gameCardEl.innerHTML = `<form>${hands[firstHand]}</form>
+      rockPaperScissors.innerHTML = `<form>${hands[firstHand]}</form>
                         <form>${hands[secondHand]}</form>
                         <p>${message}</p>
                         <table>
@@ -154,7 +155,7 @@ function shoot() {
                         <button id="return-btn">RETURN</button>
                         </a>`;
     } else {
-      gameCardEl.innerHTML = `<form>${hands[firstHand]}</form>
+      rockPaperScissors.innerHTML = `<form>${hands[firstHand]}</form>
                         <form>${hands[secondHand]}</form>
                         <p>${message}</p>
                         <table>
@@ -179,10 +180,10 @@ function shoot() {
 
   let rstEl = document.getElementById("restart-btn");
   rstEl.addEventListener("click", function () {
-    play();
+    playRps();
   });
 }
 
 rpsEl.addEventListener("click", function () {
-  play();
+  playRps();
 });
