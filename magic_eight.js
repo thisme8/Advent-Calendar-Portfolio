@@ -38,7 +38,7 @@ function playMe() {
                                 <br>
                                 <br>
                                 <div class="rotate-image">
-                                  <img src="src/img/me.webp" style="height:300px; width:300px" class="rotate-image"></img>
+                                  <img src="src/img/me.webp" style="height:250px; width:250px" class="rotate-image"></img>
                                 </div>
   `;
 
