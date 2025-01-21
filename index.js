@@ -10,7 +10,7 @@ function advent() {
 
   //to set time-alert message to original state
   let messageOriginal = `<div>
-                            <img src= src/img/logo.ico
+                            <img src= "src/img/img18.png"
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
@@ -23,7 +23,7 @@ function advent() {
     }, 4000);
   } else {
     messageEl.innerHTML = `<div>
-                            <img src= src/img/logo.ico
+                            <img "src= src/img/>img18.png"
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
@@ -377,7 +377,7 @@ cardEl.forEach((card, index) => {
     const cardKey = `cardState${index}`;
     const cardBackEl = card.querySelector(".card-back");
     messageEl.innerHTML = `<div>
-                            <img src= src/img/logo.ico
+                            <img src= src/img/img18.png
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
