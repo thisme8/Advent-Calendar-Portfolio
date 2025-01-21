@@ -7,23 +7,42 @@ function advent() {
   let entryTime = Date.now();
   console.log(entryTime);
   localStorage.setItem("firstEntry", entryTime);
+
+  //to set time-alert message to original state
+  let messageOriginal = `<div>
+                            <img src= src/img/logo.ico
+                                style = "height:50px; width:50px; border-radius:50%"
+                            >
+                           </div>`;
+  localStorage.setItem("messageOriginal", messageOriginal);
+
   if (localStorage.getItem("cardState0") != "true") {
     messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
+    setTimeout(() => {
+      messageEl.innerHTML = localStorage.getItem("messageOriginal");
+    }, 4000);
   } else {
     messageEl.innerHTML = `<div>
-                            <img src= src/img/img18.png
+                            <img src= src/img/logo.ico
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
   }
-  timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+
+  //to set timer-collapse message to original state
   let originalTimeContent = `<div><i class="fas fa-clock fa-3x"></i></div>`;
   localStorage.setItem("original", originalTimeContent);
+
+  timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+
   timeEl.addEventListener("click", function () {
     for (let i = 0; i < 12; i++) {
       localStorage.setItem(`cardState${i}`, true);
       localStorage.setItem(`cardLock${i}`, "unlocked");
     }
+  });
+  setTimeout(() => {
+    messageEl.innerHTML = messageOriginal;
   });
 }
 advent();
@@ -57,6 +76,7 @@ function lockCard(card, index) {
   if (lockIndicator) lockIndicator.textContent = "🔐";
 }
 
+// content for each of the 12 cards
 const cardContent = [
   {
     title: "INTRODUCTION",
@@ -322,6 +342,7 @@ const cardContent = [
   },
 ];
 
+// creating a NodeList for all the card elements within cardEl from DOM
 cardEl.forEach((card, index) => {
   //   for locking and unlocking card without event listener
   function checkAndUnlock() {
@@ -347,19 +368,21 @@ cardEl.forEach((card, index) => {
   }
   setInterval(checkAndUnlock, 100);
 
+  // to select individual content depending on the index of the array cardContent
   const selectedContent = cardContent[index];
 
+  // to listen to the click event of each of the 12 card elements
   card.addEventListener("click", function () {
     let currentTime = Date.now();
     const cardKey = `cardState${index}`;
     const cardBackEl = card.querySelector(".card-back");
     messageEl.innerHTML = `<div>
-                            <img src= src/img/img18.png
+                            <img src= src/img/logo.ico
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
 
-    // if an already opened card has been clicked
+    // if an already-opened card has been clicked
     if (localStorage.getItem(cardKey) === "true") {
       cardBackEl.innerHTML = `<div style="text-align: center;">
                                     <p style="
@@ -446,15 +469,27 @@ cardEl.forEach((card, index) => {
           console.log(
             `Please wait ${remainingTime} more seconds(s) to open card ${index}.`
           );
+          // time-alert message to open the first card before they can open the others
           if (remainingTime <= 0) {
             messageEl.innerHTML = `Firstly, please open the card 0 to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
-                                  Meanwhile, Would you like to play some fun games 
+                                  Or, may be you would like to play some fun games 
                                   <a href="#section" 
                                      style="color:rgb(4, 4, 55);
                                      font-weight: bold;
                                   ">
                                      Here</a>?`;
+
+            setTimeout(() => {
+              messageEl.innerHTML = localStorage.getItem("messageOriginal");
+            }, 4000);
+
+            timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
+                                <div><i class="fas fa-clock fa-3x"></i></div>`;
+            setTimeout(() => {
+              timeEl.innerHTML = localStorage.getItem("original");
+            }, 4000);
           } else {
+            // time-alert message to wait for the coolDown time to pass before the locked card is unlocked
             messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
                                   Meanwhile, Would you like to play some fun games 
                                   <a href="#section" 
@@ -462,21 +497,26 @@ cardEl.forEach((card, index) => {
                                      font-weight: bold;
                                   ">
                                      Here</a>?`;
+            setTimeout(() => {
+              messageEl.innerHTML = localStorage.getItem("messageOriginal");
+            }, 4000);
+
             timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
                                 <div><i class="fas fa-clock fa-3x"></i></div>`;
             setTimeout(() => {
               timeEl.innerHTML = localStorage.getItem("original");
-            }, 5000);
+            }, 4000);
           }
         }
       }
     }
 
+    // for the glide card to appear on each individual cards
     const glideEl = card.querySelector(".glide-btn");
     const overlayEl = document.getElementById("overlay");
     const glideCardEl = document.getElementById("glide-card");
-    // Show the glide card on button click
-    // Show the glide card on button click
+
+    // To listen to the click event of glide-btn and show the glide card
     glideEl.addEventListener("click", () => {
       overlayEl.classList.remove("hidden");
       glideCardEl.innerHTML = `<div
@@ -510,4 +550,8 @@ cardEl.forEach((card, index) => {
       }
     });
   });
+  // to set the time-alert message to its original state after 5 seconds
+  setTimeout(() => {
+    messageEl.innerHTML = localStorage.getItem("messageOriginal");
+  }, 4000);
 });
