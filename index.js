@@ -23,7 +23,7 @@ function advent() {
     }, 4000);
   } else {
     messageEl.innerHTML = `<div>
-                            <img "src= src/img/>img18.png"
+                            <img src= "src/img/img18.png"
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
@@ -480,12 +480,13 @@ cardEl.forEach((card, index) => {
                                   ">
                                      Here</a>?`;
 
+            timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
+                                <div><i class="fas fa-clock fa-3x"></i></div>`;
+
             setTimeout(() => {
               messageEl.innerHTML = localStorage.getItem("messageOriginal");
             }, 4000);
 
-            timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
-                                <div><i class="fas fa-clock fa-3x"></i></div>`;
             setTimeout(() => {
               timeEl.innerHTML = localStorage.getItem("original");
             }, 4000);
@@ -555,4 +556,16 @@ cardEl.forEach((card, index) => {
   setTimeout(() => {
     messageEl.innerHTML = localStorage.getItem("messageOriginal");
   }, 4000);
+});
+
+let reAdventEl = document.getElementById("re-advent-btn");
+
+reAdventEl.addEventListener("click", function () {
+  messageEl.innerHTML = `<div>
+                            <img src= "src/img/img18.png"
+                                style = "height:50px; width:50px; border-radius:50%"
+                            >
+                           </div>`;
+  timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+  localStorage.clear();
 });
