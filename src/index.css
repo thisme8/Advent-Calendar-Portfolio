@@ -85,6 +85,7 @@ p {
   font-size: 14px;
   font-weight: bold;
 }
+
 #time-btn:hover .hover-message {
   display: block;
 }
@@ -114,7 +115,7 @@ p {
   transform: rotateY(0deg);
 }
 
-/* Locked Veil */
+/* locked layer */
 .card-locked::before {
   content: "";
   position: absolute;
@@ -130,7 +131,7 @@ p {
   transition: opacity 0.3s ease;
 }
 
-/* Remove Veil for Unlocked Cards */
+/* remove locked layer for Unlocked Cards */
 .card-unlocked .card-locked::before {
   opacity: 0;
   /* Fade out the overlay */
@@ -390,6 +391,10 @@ p {
   }
 }
 
+.game-cover:hover {
+  background-image: url("img/img18.png");
+  transform: translateZ(-1px) rotateY(-180deg);
+}
 .game-cover-back {
   position: absolute;
   height: 100%;

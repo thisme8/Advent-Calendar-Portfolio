@@ -14,7 +14,7 @@ let imageArray = [
 ];
 
 let gameCardMm = document.querySelectorAll(".game-card");
-let memoryMat = gameCardMm[1];
+let memoryMap = gameCardMm[1];
 let mmEl = document.getElementById("mm-btn");
 
 // function to shuffle the items of the array properly
@@ -28,13 +28,13 @@ function shuffleArray(arr) {
 
 // function to arrange cards on the mat
 function arrange() {
-  memoryMat.innerHTML = `<div class="grid"></div>
+  memoryMap.innerHTML = `<div class="grid"></div>
                         <button id="rpt-btn">REPEAT</button>
                             <a href="games.html">
                                 <button id="return-btn">RETURN</button>
                             </a>`;
 
-  const gridEl = memoryMat.querySelector(".grid");
+  const gridEl = memoryMap.querySelector(".grid");
   const rptEl = document.getElementById("rpt-btn");
 
   // calling the shuffle function
