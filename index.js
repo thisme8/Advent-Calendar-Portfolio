@@ -171,17 +171,36 @@ const cardContent = [
         
        
 
-         <div class="glide-box" style="height : 100px; width:550px">Region-Based Crop Yield Prediction in Nepal using LSTM
+         <div class="glide-box" style="height : 100px; width:550px">
+                                <a href="https://github.com/thisme8/bctminor-repo"
+                                  style="text-align: center;
+                                  font-size: large;
+                                  font-weight: bold;
+                                  color: white;">
+                                Region-Based Crop Yield Prediction in Nepal using LSTM
+                                </a>
                                 <p>Python, Flask</p>
                                 <p>Prediction and Recommendation System</p>
          </div>
   
-        <div class="glide-box" style="height : 100px; width:550px">Leads-Tracker
+        <div class="glide-box" style="height : 100px; width:550px"> <a href="https://github.com/thisme8/LeadsTracker"
+                                  style="text-align: center;
+                                  font-size: large;
+                                  font-weight: bold;
+                                  color: white;">
+                                Leads-Tracker
+                                </a>
                                 <p>Vanilla Javascript, HTML, CSS</p>
                                 <p>Google chrome extension for tracking and storing sales leads</p>
         </div>
   
-        <div class="glide-box" style="height : 100px; width:550px"; padding: 6px">Advent-Calendar-Portfolio
+        <div class="glide-box" style="height : 100px; width:550px"; padding: 6px"> <a href="https://github.com/thisme8/Advent-Calendar-Portfolio"
+                                  style="text-align: center;
+                                  font-size: large;
+                                  font-weight: bold;
+                                  color: white;">
+                                Advent-Calendar-Portfolio
+                                </a>
                                 <p>Vanilla Javascript, HTML, CSS</p>
                                 <p>Personal portfolio designed as an interactive advent calendar</p>
         </div>
