@@ -12,6 +12,20 @@ let imageArray = [
   "src/img/img9.jpg",
   "src/img/img13.jpg",
 ];
+let konamiCode = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a",
+];
+
+inputSequence = [];
 
 let gameCardMm = document.querySelectorAll(".game-card");
 let memoryMap = gameCardMm[1];
@@ -29,13 +43,13 @@ function shuffleArray(arr) {
 // function to arrange cards on the mat
 function arrange() {
   memoryMap.innerHTML = `<div class="grid"></div>
-                        <button id="rpt-btn">REPEAT</button>
+                        <button id="rpt-mm-btn">REPEAT</button>
                             <a href="games.html">
                                 <button id="return-btn">RETURN</button>
                             </a>`;
 
   const gridEl = memoryMap.querySelector(".grid");
-  const rptEl = document.getElementById("rpt-btn");
+  const rptMmEl = document.getElementById("rpt-mm-btn");
 
   // calling the shuffle function
   shuffleArray(imageArray);
@@ -78,7 +92,7 @@ function arrange() {
       }
     });
   });
-  rptEl.addEventListener("click", () => mmEl.click());
+  rptMmEl.addEventListener("click", () => mmEl.click());
 }
 
 function checkMatch() {
@@ -103,10 +117,27 @@ function checkMatch() {
     setTimeout(() => {
       flippedCards.forEach((card) => card.classList.remove("flipped"));
       flippedCards = [];
-    }, 900);
+    }, 800);
   }
 }
 
+localStorage.setItem("playState", false);
+
 mmEl.addEventListener("click", function () {
   arrange();
+  localStorage.setItem("playState", true);
+});
+
+document.addEventListener("keydown", (e) => {
+  inputSequence.push(e.key);
+  inputSequence = inputSequence.slice(-konamiCode.length);
+  if (inputSequence.join("") === konamiCode.join("")) {
+    if (localStorage.getItem("playState") === "true") {
+      let cellEl = document.querySelectorAll(".cell");
+      cellEl.forEach((cell) => cell.classList.add("flipped"));
+      setTimeout(() => {
+        alert(`Congratulations! You've matched all the cards!`);
+      }, 400);
+    }
+  }
 });

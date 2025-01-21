@@ -9,13 +9,13 @@ function playMe() {
                                 <br>
                               <div><img src="src/img/me.webp" style="height:250px; width:250px"></img></div>
                                 <br>
-                              <button id="shoot-btn">SHAKE</button>
+                              <button id="shake-btn">SHAKE</button>
                               <a href="games.html">
                                 <button id="return-btn">RETURN</button>
                               </a>
   `;
 
-  let shakeBtn = document.getElementById("shoot-btn");
+  let shakeBtn = document.getElementById("shake-btn");
   shakeBtn.addEventListener("click", function () {
     let answer = Math.floor(Math.random() * 3);
     answer = answers[answer];
@@ -27,7 +27,7 @@ function playMe() {
                                   <img src="src/img/me.webp" style="height:250px; width:250px"></img>
                                 </div>
                                 <br>
-                                <button id="rpt-btn">REPEAT</button>
+                                <button id="rpt-me-btn">REPEAT</button>
                                 <a href="games.html">
                                   <button id="return-btn">RETURN</button>
                                 </a>
@@ -44,8 +44,8 @@ function playMe() {
 
     setTimeout(() => {
       magicEightCard.innerHTML = answerCard;
-      let rptEl = document.getElementById("rpt-btn");
-      rptEl.addEventListener("click", () => shakeBtn.click());
+      let rptMeEl = document.getElementById("rpt-me-btn");
+      rptMeEl.addEventListener("click", () => shakeBtn.click());
     }, 2000);
   });
 }

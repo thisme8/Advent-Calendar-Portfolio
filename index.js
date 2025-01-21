@@ -164,6 +164,30 @@ const cardContent = [
       </div>`,
   },
   {
+    title: " RELEVANT PROJECTS",
+    layout: `
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h2 style="color:rgb(4, 4, 55)">${"RELEVANT PROJECTS"}</h2>
+        
+       
+
+         <div class="glide-box" style="height : 100px; width:550px">Region-Based Crop Yield Prediction in Nepal using LSTM
+                                <p>Python, Flask</p>
+                                <p>Prediction and Recommendation System</p>
+         </div>
+  
+        <div class="glide-box" style="height : 100px; width:550px">Leads-Tracker
+                                <p>Vanilla Javascript, HTML, CSS</p>
+                                <p>Google chrome extension for tracking and storing sales leads</p>
+        </div>
+  
+        <div class="glide-box" style="height : 100px; width:550px"; padding: 6px">Advent-Calendar-Portfolio
+                                <p>Vanilla Javascript, HTML, CSS</p>
+                                <p>Personal portfolio designed as an interactive advent calendar</p>
+        </div>
+      </div>`,
+  },
+  {
     title: "RESUME",
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
@@ -173,30 +197,31 @@ const cardContent = [
       </div>`,
   },
   {
-    title: "CONTACT INFO",
+    title: "KONAMI CODE",
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        <h2 style="color:rgb(4, 4, 55)">${"KONAMI CODE"}</h2>
         
-        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
-        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
-        </div>
+        <div class="glide-box"><i class="fa fa-arrow-up"></i>   <i class="fa fa-arrow-up"></i></div>
+         <div class="glide-box"><i class="fa fa-arrow-down"></i>   <i class="fa fa-arrow-down"></i></div>
+         <div class="glide-box"><i class="fa fa-arrow-left"></i>   <i class="fa fa-arrow-right"></i></div>
+         <div class="glide-box"><i class="fa fa-arrow-left"></i>   <i class="fa fa-arrow-right"></i></div>
+         <div class="glide-box"><i class="fa fa-b"></i>   <i class="fa fa-a"></i></div></div>
+         
+        <form><p>🥳🥳🥳🥳🥳🥳🥳🥳 
         <br>
         <br>
-        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
-        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
-        </div>
+        You have just unlocked the KONAMI CODES🤫 for the 
         <br>
         <br>
-        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
-        </div>
+        MEMORY MAP🧠 game in the games section 
         <br>
         <br>
-        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
-        </div>
-        
+        So the memory game for YOU could be to remember THIS code 😎😎
+        <br>
+        <br>
+        Have fun WINNING!! 💪
+        </p></form>
         
       </div>`,
   },
@@ -229,113 +254,70 @@ const cardContent = [
       </div>`,
   },
   {
-    title: "CONTACT INFO",
+    title: "SOCIALS",
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        <h2 style="color:rgb(4, 4, 55)">${"SOCIALS"}</h2>
         
-        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
-        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        <div class="glide-box"><i class="fab fa-facebook"></i> Facebook : 
+        <a href="https://www.facebook.com/innu.upreti" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
         </div>
         <br>
         <br>
-        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
-        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+        <div class="glide-box"><i class="fab fa-instagram"></i> Instagram : 
+        <a href="https://www.instagram.com/stuti_nu/" target="_blank" style="color:white; font-weight:bold">stuti_nu</a>
         </div>
         <br>
         <br>
-        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
+        <div class="glide-box"><i class="fab fa-twitter"></i> Twitter :
+        <a href="https://x.com/stutiupreti8" target="_blank" style="color:white; font-weight:bold">@stutiupreti8</a>
         </div>
         <br>
         <br>
-        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
+        <div class="glide-box"><i class="fab fa-medium"></i> Medium : 
+        <a href="https://medium.com/@stutiupreti8" target="_blank" style="color:white; font-weight:bold">@stutiupreti8</a>
         </div>
         
         
       </div>`,
   },
   {
-    title: "CONTACT INFO",
+    title: "COURSES AND CERTIFICATION",
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
-        
-        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
-        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
+        <h2 style="color:rgb(4, 4, 55)">${"COURSES AND CERTIFICATION"}</h2>
+
+         <div class="glide-box" style="height : 80px">Flutter Development : 45 hours Training program
+                                <br>
+                                <p>Certificate of Completion</p>
+         </div>
+  
+        <div class="glide-box" style="height : 80px">MERN Stack Training program
+                                <br>
+                                <p>Himalaya College Of Engineering, 2024</p>
         </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
-        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
+  
+        <div class="glide-box" style="height : 80px; padding: 6px ">Infrastructure Cloud Club Camp : workshop
+                                <br>
+                                <p style="display: flex; flex-direction: row; justify-content: center;">Credly, 2024
+                                <a href="https://www.credly.com/badges/452cebfb-322f-4e1d-b17c-6475c1b5eae7/public_url"  target="_blank">
+                                <img src="src/img/aws-cloud-clubs-infrastructure-camper.png" style=" width:35px; height:40px; margin-bottom:3px">
+                                </a>
+                                </p>
         </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
-        </div>
-        
-        
       </div>`,
   },
   {
-    title: "CONTACT INFO",
+    title: "HOBBIES AND INTERESTS",
     layout: `
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
+        <h2 style="color:rgb(4, 4, 55)">${"HOBBIES AND INTERESTS"}</h2>
         
-        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
-        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
-        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
-        </div>
-        
-        
-      </div>`,
-  },
-  {
-    title: "CONTACT INFO",
-    layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55)">${"CONTACT INFO"}</h2>
-        
-        <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
-        <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fas fa-envelope"></i> Email : 
-        <a href="mailto: stutiupreti8@gmail.com" target="_blank" style="color:white; font-weight:bold"> stutiupreti8@gmail.com</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-linkedin"></i> LinkedIn :
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
-        </div>
-        <br>
-        <br>
-        <div class="glide-box"><i class="fab fa-github"></i> GitHub : 
-        <a href="https://github.com/thisme8" target="_blank" style="color:white; font-weight:bold">thisme8</a>
-        </div>
+        <div class="glide-box" style="height : 80px">Creating Fun And Personal Coding Projects 💻</div>
+         <div class="glide-box" style="height : 80px">Travel of any form and anywhere 🏕️</div>
+         <div class="glide-box" style="height : 80px">Creating Written Pieces ✍️</div>
+         <div class="glide-box" style="height : 80px">Exploring fiction and non-fiction works 📖</div>
+         
         
         
       </div>`,
