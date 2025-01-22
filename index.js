@@ -4,10 +4,6 @@ let timeEl = document.getElementById("time-btn");
 
 //function for recording rendering time
 function advent() {
-  let entryTime = Date.now();
-  console.log(entryTime);
-  localStorage.setItem("firstEntry", entryTime);
-
   //to set time-alert message to original state
   let messageOriginal = `<div>
                             <img src= "src/img/img18.png"
@@ -392,17 +388,17 @@ cardEl.forEach((card, index) => {
                                         font-family: Arial, sans-serif;
                                         margin-bottom: 10px;">
                                         
-                                        You opened this one already......
+                                        Oh, look who's back!......
                                     
                                     <br/>
                                     
-                                    You Silly You!!!</p>
+                                    Maybe the next card holds a surprise!🎁</p>
                                     
                                     <br/>
                                     
                                     <p style="color:rgb(4, 4, 55); font-weight:bold; font-size: 20px; ">${selectedContent.title}</p>
                                     
-                                    <br/>
+                                    
                                     
                                     <button class = "glide-btn">SHOW</button>
                                 </div>`;
@@ -567,27 +563,5 @@ let reAdventEl = document.getElementById("re-advent-btn");
 reAdventEl.addEventListener("click", function () {
   localStorage.clear();
 
-  // to show and hide time-alert message
-  let messageOriginal = `<div>
-                            <img src= "src/img/img18.png"
-                                style = "height:50px; width:50px; border-radius:50%"
-                            >
-                           </div>`;
-  localStorage.setItem("messageOriginal", messageOriginal);
-
-  messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
-  setTimeout(() => {
-    messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
-  }, 4000);
-
-  // to show and hide time-alert message
-  timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
-                                <div><i class="fas fa-clock fa-3x"></i></div>`;
-
-  let originalTimeContent = `<div><i class="fas fa-clock fa-3x"></i></div>`;
-  localStorage.setItem("original", originalTimeContent);
-
-  setTimeout(() => {
-    timeEl.innerHTML = `${localStorage.getItem("original")}`;
-  }, 4000);
+  advent();
 });
