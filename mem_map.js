@@ -42,13 +42,13 @@ function shuffleArray(arr) {
 
 // function to arrange cards on the mat
 function arrange() {
-  memoryMap.innerHTML = `<div class="grid"></div>
+  memoryMap.innerHTML = `<div class="grid-mm"></div>
                         <button id="rpt-mm-btn">REPEAT</button>
                             <a href="games.html">
                                 <button id="return-btn">RETURN</button>
                             </a>`;
 
-  const gridEl = memoryMap.querySelector(".grid");
+  const gridMmEl = memoryMap.querySelector(".grid-mm");
   const rptMmEl = document.getElementById("rpt-mm-btn");
 
   // calling the shuffle function
@@ -80,7 +80,7 @@ function arrange() {
     cell.appendChild(cellBack);
 
     //adding the cells to the grid
-    gridEl.appendChild(cell);
+    gridMmEl.appendChild(cell);
 
     cell.addEventListener("click", function () {
       if (!cell.classList.contains("flipped") && flippedCards.length < 2)
