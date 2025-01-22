@@ -1,6 +1,6 @@
 # Advent-Calendar-Portfolio
 
-                                                                              Overview
+                                                            Overview
 This project is a personal academic and career portfolio presented as an interactive advent calendar. Each "minute" reveals a piece of information about my journey and skills, accompanied by engaging mini-games built using JavaScript. 
 
 Visit
