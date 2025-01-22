@@ -564,4 +564,6 @@ reAdventEl.addEventListener("click", function () {
   localStorage.clear();
 
   advent();
+
+  window.location.reload();
 });
