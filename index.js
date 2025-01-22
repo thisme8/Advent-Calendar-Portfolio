@@ -19,8 +19,8 @@ function advent() {
   if (localStorage.getItem("cardState0") != "true") {
     messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
     setTimeout(() => {
-      messageEl.innerHTML = localStorage.getItem("messageOriginal");
-    }, 4000);
+      messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
+    }, 5000);
   } else {
     messageEl.innerHTML = `<div>
                             <img src= "src/img/img18.png"
@@ -42,8 +42,8 @@ function advent() {
     }
   });
   setTimeout(() => {
-    messageEl.innerHTML = messageOriginal;
-  });
+    timeEl.innerHTML = `${localStorage.getItem("original")}`;
+  }, 5000);
 }
 advent();
 
@@ -472,7 +472,7 @@ cardEl.forEach((card, index) => {
           );
           // time-alert message to open the first card before they can open the others
           if (remainingTime <= 0) {
-            messageEl.innerHTML = `Firstly, please open the card 0 to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
+            messageEl.innerHTML = `Firstly, please open the card 0 to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}</p>
                                   Or, may be you would like to play some fun games 
                                   <a href="#section" 
                                      style="color:rgb(4, 4, 55);
@@ -484,15 +484,17 @@ cardEl.forEach((card, index) => {
                                 <div><i class="fas fa-clock fa-3x"></i></div>`;
 
             setTimeout(() => {
-              messageEl.innerHTML = localStorage.getItem("messageOriginal");
-            }, 4000);
+              messageEl.innerHTML = `${localStorage.getItem(
+                "messageOriginal"
+              )}`;
+            }, 5000);
 
             setTimeout(() => {
-              timeEl.innerHTML = localStorage.getItem("original");
-            }, 4000);
+              timeEl.innerHTML = `${localStorage.getItem("original")}`;
+            }, 5000);
           } else {
             // time-alert message to wait for the coolDown time to pass before the locked card is unlocked
-            messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}.</p>
+            messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}</p>
                                   Meanwhile, Would you like to play some fun games 
                                   <a href="#section" 
                                      style="color:rgb(4, 4, 55);
@@ -500,14 +502,16 @@ cardEl.forEach((card, index) => {
                                   ">
                                      Here</a>?`;
             setTimeout(() => {
-              messageEl.innerHTML = localStorage.getItem("messageOriginal");
-            }, 4000);
+              messageEl.innerHTML = `${localStorage.getItem(
+                "messageOriginal"
+              )}`;
+            }, 5000);
 
             timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
                                 <div><i class="fas fa-clock fa-3x"></i></div>`;
             setTimeout(() => {
-              timeEl.innerHTML = localStorage.getItem("original");
-            }, 4000);
+              timeEl.innerHTML = `${localStorage.getItem("original")}`;
+            }, 5000);
           }
         }
       }
@@ -554,18 +558,36 @@ cardEl.forEach((card, index) => {
   });
   // to set the time-alert message to its original state after 5 seconds
   setTimeout(() => {
-    messageEl.innerHTML = localStorage.getItem("messageOriginal");
-  }, 4000);
+    messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
+  }, 5000);
 });
 
 let reAdventEl = document.getElementById("re-advent-btn");
 
 reAdventEl.addEventListener("click", function () {
-  messageEl.innerHTML = `<div>
+  localStorage.clear();
+
+  // to show and hide time-alert message
+  let messageOriginal = `<div>
                             <img src= "src/img/img18.png"
                                 style = "height:50px; width:50px; border-radius:50%"
                             >
                            </div>`;
-  timeEl.innerHTML = `<div><i class="fas fa-clock fa-3x"></i></div>`;
-  localStorage.clear();
+  localStorage.setItem("messageOriginal", messageOriginal);
+
+  messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
+  setTimeout(() => {
+    messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
+  }, 5000);
+
+  // to show and hide time-alert message
+  timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
+                                <div><i class="fas fa-clock fa-3x"></i></div>`;
+
+  let originalTimeContent = `<div><i class="fas fa-clock fa-3x"></i></div>`;
+  localStorage.setItem("original", originalTimeContent);
+
+  setTimeout(() => {
+    timeEl.innerHTML = `${localStorage.getItem("original")}`;
+  }, 5000);
 });
