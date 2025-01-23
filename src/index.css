@@ -6,6 +6,33 @@ body {
   background-position: center;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 0;
+    width: 95%;
+  }
+
+  .card {
+    width: 90%; /* Make cards full-width */
+    margin: 10px auto; /* Center-align cards */
+  }
+
+  .header {
+    height: 10vh; /* Reduce header height */
+  }
+}
+
 h1 {
   font-family: cursive;
   font-weight: bold;
