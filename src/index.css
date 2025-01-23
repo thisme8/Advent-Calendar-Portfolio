@@ -6,22 +6,6 @@ body {
   background-position: center;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 20px;
-  }
-
-  .container {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 12px; /* Further adjustments */
-  }
-}
-
 h1 {
   font-family: cursive;
   font-weight: bold;
