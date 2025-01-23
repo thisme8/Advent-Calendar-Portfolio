@@ -344,6 +344,9 @@ p {
 
 /* --------------------------------------------------------------------------GAMES------------------------------------------------------------------------------------------------------- */
 .catalogue-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   align-content: center;
   width: 100vw;
@@ -354,7 +357,6 @@ p {
   padding: 7px 0;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
   padding: 0;
   transition: background-color 0.3s ease all;
 }
