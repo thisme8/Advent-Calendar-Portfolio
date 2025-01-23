@@ -4,10 +4,10 @@ const magicEightCard = gameCardMe[3];
 let meEl = document.getElementById("me-btn");
 
 function playMe() {
-  magicEightCard.innerHTML = `<form>BEWARE!!! Herein lies the answer to all your questions 🔮</form>
+  magicEightCard.innerHTML = `<form style="height: 15%; margin-bottom:1px">BEWARE!!! Herein lies the answer to all your questions 🔮</form>
+
                                 <br>
-                                <br>
-                              <div><img src="src/img/me.webp" style="height:55%; width:55%"></img></div>
+                              <div><img src="src/img/me.webp" style="height:55%; width:55%; margin-top:1%"></img></div>
                                 <br>
                               <button id="shake-btn">SHAKE</button>
                               <a href="games.html">
@@ -20,11 +20,10 @@ function playMe() {
     let answer = Math.floor(Math.random() * 3);
     answer = answers[answer];
 
-    let answerCard = `<form>${answer}</form>
-                                <br>
+    let answerCard = `<form style="height: 10%; margin-bottom:2px">${answer}</form>
                                 <br>
                                 <div>
-                                  <img src="src/img/me.webp" style="height:55%; width:55%"></img>
+                                  <img src="src/img/me.webp" style="height:55%; width:55%; margin-top:2%"></img>
                                 </div>
                                 <br>
                                 <button id="rpt-me-btn">REPEAT</button>

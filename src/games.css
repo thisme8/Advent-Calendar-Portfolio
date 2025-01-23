@@ -8,6 +8,13 @@ body {
   background-position: center;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+
 h1 {
   font-family: cursive;
   font-weight: bold;
@@ -219,6 +226,7 @@ td {
   background-color: rgba(255, 238, 217, 0.443);
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
 /* --------------------------------------------------------------------------Game buttons------------------------------------------------------------------------------------------------------- */

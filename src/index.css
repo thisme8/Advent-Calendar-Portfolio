@@ -1,9 +1,24 @@
+html,
 body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   background-image: url(img/img16.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .footer-container {
+    margin-top: 100vh;
+  }
 }
 
 h1 {
@@ -110,20 +125,23 @@ p {
 }
 
 .card-container {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   row-gap: 10%;
   column-gap: 5%;
-  width: 80%;
-  height: 50%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 85%;
+  top: 20%;
+  left: 7.5%;
+  background-color: aqua;
+  margin-bottom: 40px;
+  position: relative;
+  flex: 1;
 }
 
 .card {
-  height: 60%;
+  height: 30vh;
   width: 20%;
   background-color: rgba(255, 238, 217, 0.443);
   margin: 20px auto 20px 60px;
@@ -344,21 +362,21 @@ p {
 
 /* --------------------------------------------------------------------------GAMES------------------------------------------------------------------------------------------------------- */
 .catalogue-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  row-gap: 5%;
   text-align: center;
   align-content: center;
   width: 100vw;
-  height: 45%;
-  margin-bottom: 2%;
-  right: auto;
-  left: auto;
+  height: 45vh;
   padding: 7px 0;
   background-size: cover;
-  background-attachment: fixed;
   padding: 0;
   transition: background-color 0.3s ease all;
+  flex: 2;
+  overflow: scroll;
 }
 
 /* .catalogue-container:hover {
@@ -377,6 +395,8 @@ p {
   margin-right: auto;
   padding: 20px 20px;
   border-radius: 2px;
+  background-attachment: fixed;
+  font-size: 100%;
 }
 
 .game-cover {
@@ -419,6 +439,7 @@ p {
 .game-cover-back {
   position: absolute;
   height: 100%;
+  min-height: 45vh;
   width: 100%;
   transform-style: preserve-3d;
   transition: ease all 0.7s;
@@ -429,14 +450,14 @@ p {
 }
 
 .footer-container {
+  position: relative;
   text-align: center;
   width: 100vw;
   height: 5vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
   padding: 5px 0;
+  bottom: 0px;
   background-color: rgba(255, 238, 217, 0.443);
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: contain;
+  flex-shrink: 0;
+  /* background-attachment: fixed; */
 }
