@@ -7,7 +7,7 @@ function playMe() {
   magicEightCard.innerHTML = `<form>BEWARE!!! Herein lies the answer to all your questions 🔮</form>
                                 <br>
                                 <br>
-                              <div><img src="src/img/me.webp" style="height:250px; width:250px"></img></div>
+                              <div><img src="src/img/me.webp" style="height:55%; width:55%"></img></div>
                                 <br>
                               <button id="shake-btn">SHAKE</button>
                               <a href="games.html">
@@ -24,7 +24,7 @@ function playMe() {
                                 <br>
                                 <br>
                                 <div>
-                                  <img src="src/img/me.webp" style="height:250px; width:250px"></img>
+                                  <img src="src/img/me.webp" style="height:55%; width:55%"></img>
                                 </div>
                                 <br>
                                 <button id="rpt-me-btn">REPEAT</button>
@@ -38,7 +38,7 @@ function playMe() {
                                 <br>
                                 <br>
                                 <div class="rotate-image">
-                                  <img src="src/img/me.webp" style="height:300px; width:300px" class="rotate-image"></img>
+                                  <img src="src/img/me.webp" style="height:65%; width:65%" class="rotate-image"></img>
                                 </div>
   `;
 

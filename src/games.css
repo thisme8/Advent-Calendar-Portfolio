@@ -209,7 +209,7 @@ table {
   margin-right: auto;
   border: 1px solid rgb(4, 4, 55);
   background-color: rgba(223, 202, 176, 0.76);
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   margin-top: 10%;
   text-align: center;
 }
@@ -306,8 +306,7 @@ td {
   width: 50%;
   padding: 5px;
   border: none;
-  margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 3%;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: auto;
@@ -320,6 +319,7 @@ td {
 #restart-btn,
 #rpf-btn,
 #rpt-btn {
+  position: relative;
   border-radius: 3px;
   background-color: rgb(4, 4, 55);
   color: antiquewhite;
@@ -328,7 +328,7 @@ td {
   width: 50%;
   padding: 5px;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 3%;
   margin-left: 25%;
   margin-right: 25%;
 }
