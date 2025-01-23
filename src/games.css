@@ -8,6 +8,22 @@ body {
   background-position: center;
 }
 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Further adjustments */
+  }
+}
+
 h1 {
   font-family: cursive;
   font-weight: bold;
@@ -193,8 +209,8 @@ table {
   margin-right: auto;
   border: 1px solid rgb(4, 4, 55);
   background-color: rgba(223, 202, 176, 0.76);
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 10%;
+  margin-top: 10%;
   text-align: center;
 }
 
@@ -202,8 +218,8 @@ tr,
 td {
   text-align: center;
   border: 1px solid rgb(4, 4, 55);
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 15%;
+  margin-right: 15%;
   width: 55%;
 }
 

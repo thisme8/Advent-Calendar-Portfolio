@@ -4,7 +4,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  height: 100%;
 }
 
 h1 {
@@ -113,15 +112,17 @@ p {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
-  column-gap: 20px;
+  flex-direction: row;
+  row-gap: 10%;
+  column-gap: 5%;
   width: 80%;
   height: 50%;
-  margin: auto;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
-  position: relative;
   height: 60%;
   width: 20%;
   background-color: rgba(255, 238, 217, 0.443);
@@ -160,7 +161,6 @@ p {
 .cover,
 .card-back {
   position: absolute;
-
   top: 5%;
   left: 5%;
   bottom: 5%;
@@ -348,10 +348,9 @@ p {
   align-content: center;
   width: 100vw;
   height: 45%;
-  margin-bottom: 2px;
+  margin-bottom: 2%;
   right: auto;
   left: auto;
-  margin-top: 70%;
   padding: 7px 0;
   background-size: cover;
   background-attachment: fixed;
@@ -380,7 +379,7 @@ p {
 
 .game-cover {
   height: 100%;
-  width: 90%px;
+  width: 100%;
   background-size: cover;
   object-fit: scale-down;
   transition: background-image 0.3s ease all;
@@ -434,7 +433,6 @@ p {
   bottom: 0;
   right: 0;
   left: 0;
-  margin-top: 0%;
   padding: 5px 0;
   background-color: rgba(255, 238, 217, 0.443);
   background-size: cover;

@@ -13,10 +13,11 @@ function playTtt() {
                         flex-wrap: wrap;
                         align-items : center;
                         justify-content: center;
+                        position: relative;
                         ">
 
-                            <div  class="icon-o" >
-                            <i class="fa fa-o fa-4x"></i> 
+                            <div  class="icon-o" style ="width:20%;">
+                            <i class="fa fa-o fa-3x"></i> 
                             <p>Pick your turn<p>
                             </div>
                             
@@ -27,8 +28,8 @@ function playTtt() {
                                 </a>
                             </div>
 
-                            <div class="icon-x">   
-                            <i  class="fa fa-x fa-4x"></i>
+                            <div class="icon-x" style ="width:20%;">   
+                            <i  class="fa fa-x fa-3x"></i>
                             <p>Pick your turn<p>
                             </div>
 
@@ -95,7 +96,7 @@ function startGame(gridTttEl) {
   iconXEl.addEventListener("click", function () {
     iconXEl.innerHTML = `<div class="icon-x">
                             <i class="fa fa-x fa-5x"></i>
-                            <p>Up first<p>
+                            <p>YOU'RE UP<p>
                         </div>`;
     iconOEl.innerHTML = `<div class="icon-o">
                             <i class="fa fa-o fa-4x"></i>
@@ -161,7 +162,7 @@ function startGame(gridTttEl) {
   iconOEl.addEventListener("click", function () {
     iconOEl.innerHTML = `<div class="icon-o">
                             <i class="fa fa-o fa-5x"></i>
-                            <p>Up first<p>
+                            <p>YOU'RE UP<p>
                         </div>`;
     iconXEl.innerHTML = `<div class="icon-x">
                             <i class="fa fa-x fa-4x"></i>
@@ -223,6 +224,5 @@ function startGame(gridTttEl) {
 }
 
 tttEl.addEventListener("click", function () {
-  console.log("bitch i clicked it");
   playTtt();
 });
