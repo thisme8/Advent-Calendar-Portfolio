@@ -10,14 +10,66 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 480px) {
   h1 {
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .card {
+    height: 20vh;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #alert-message {
+    top: 20px;
+    right: 10px;
+    font-size: 10px;
+    padding: 5px 10px;
   }
 
   .footer-container {
-    margin-top: 100vh;
+    height: 10vh;
+    padding: 10px 0;
+  }
+}
+
+@media (orientation: landscape) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  .card-container {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .footer-container {
+    height: 6vh;
+  }
+}
+
+@media (orientation: portrait) {
+  h1 {
+    font-size: 35px;
+    margin-top: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-container {
+    height: 8vh;
   }
 }
 
