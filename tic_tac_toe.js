@@ -15,7 +15,6 @@ function playTtt() {
                         justify-content: center;
                         position: relative;
                         ">
-
                             <div  class="icon-o" style ="width:20%;">
                             <i class="fa fa-o fa-3x"></i> 
                             <p>Pick your turn<p>
@@ -96,7 +95,7 @@ function startGame(gridTttEl) {
   iconXEl.addEventListener("click", function () {
     iconXEl.innerHTML = `<div class="icon-x">
                             <i class="fa fa-x fa-5x"></i>
-                            <p>YOU'RE UP<p>
+                            <p style="font-size:100%">YOU'RE UP<p>
                         </div>`;
     iconOEl.innerHTML = `<div class="icon-o">
                             <i class="fa fa-o fa-4x"></i>
@@ -137,7 +136,7 @@ function startGame(gridTttEl) {
         turn = turn === "X" ? "O" : "X";
 
         if (turn === "O") {
-          iconOEl.innerHTML = `<div class="icon-o">
+          iconOEl.innerHTML = `<div class="icon-o" >
                             <i class="fa fa-o fa-5x"></i>
                         </div>`;
           iconXEl.innerHTML = `<div class="icon-x">
@@ -162,7 +161,7 @@ function startGame(gridTttEl) {
   iconOEl.addEventListener("click", function () {
     iconOEl.innerHTML = `<div class="icon-o">
                             <i class="fa fa-o fa-5x"></i>
-                            <p>YOU'RE UP<p>
+                            <p style="font-size:100%">YOU'RE UP<p>
                         </div>`;
     iconXEl.innerHTML = `<div class="icon-x">
                             <i class="fa fa-x fa-4x"></i>

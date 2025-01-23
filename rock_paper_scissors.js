@@ -30,7 +30,9 @@ function playRps() {
                         <button id="rpf-btn">RACE TO FIVE</button>
                         <a href="games.html">
                         <button id="return-btn">RETURN</button>
-                        </a>`;
+                        </a>
+                        <br>
+                        `;
 
   let shootEl = document.getElementById("shoot-btn");
   shootEl.addEventListener("click", function () {
@@ -80,6 +82,7 @@ function shoot() {
                         <button id="shoot-btn">SHOOT</button>
                         <a href="games.html">
                         <button id="return-btn">RETURN</button>
+        
                         </a>`;
   } else if (firstHand === secondHand) {
     message = `the First Hand is ${hands[firstHand]}, the Second Hand is ${hands[secondHand]} <br> 

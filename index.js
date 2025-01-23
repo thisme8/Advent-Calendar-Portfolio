@@ -77,8 +77,8 @@ const cardContent = [
   {
     title: "INTRODUCTION",
     layout: `
-      <div  style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"INTRODUCTION"}</h2>
+      <div  style="display: flex; flex-direction: column; align-items: center font-size:100%;">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"INTRODUCTION"}</h2>
         <div class="glide-box">Name: Stuti Upreti</div>
         <br>
         <br>
@@ -94,8 +94,8 @@ const cardContent = [
   {
     title: "ALMA MATER",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"ALMA MATER"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"ALMA MATER"}</h2>
         <ul style="text-align:center; margin:5px">
           <li class="glide-box">Himalaya College Of Engineering (2021-2025)</li>
           <br>
@@ -110,8 +110,8 @@ const cardContent = [
   {
     title: "SKILLS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"SKILLS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"SKILLS"}</h2>
         
           <div class="glide-box">Python</div>
           <div class="glide-box">JavaScript</div>
@@ -128,8 +128,8 @@ const cardContent = [
   {
     title: "TOOLS AND FRAMEWORKS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"TOOLS AND FRAMEWORKS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"TOOLS AND FRAMEWORKS"}</h2>
 
           <div class="glide-box">MongoDB</div>
           <div class="glide-box">Express.js</div>
@@ -146,8 +146,8 @@ const cardContent = [
   {
     title: "SOFT SKILLS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"SOFT SKILLS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"SOFT SKILLS"}</h2>
       
          <div class="glide-box">Creativity</div>
          <div class="glide-box">Communication Skills</div>
@@ -162,8 +162,8 @@ const cardContent = [
   {
     title: " RELEVANT PROJECTS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"RELEVANT PROJECTS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"RELEVANT PROJECTS"}</h2>
         
        
 
@@ -205,8 +205,8 @@ const cardContent = [
   {
     title: "RESUME",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"RESUME"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"RESUME"}</h2>
         
         <iframe src="src/resume.pdf" type="pdf" width="500px" height="550px"></iframe>
       </div>`,
@@ -214,8 +214,8 @@ const cardContent = [
   {
     title: "KONAMI CODE",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"KONAMI CODE"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"KONAMI CODE"}</h2>
         
         <div class="glide-box"><i class="fa fa-arrow-up"></i>   <i class="fa fa-arrow-up"></i></div>
          <div class="glide-box"><i class="fa fa-arrow-down"></i>   <i class="fa fa-arrow-down"></i></div>
@@ -243,8 +243,8 @@ const cardContent = [
   {
     title: "CONTACT INFO",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"CONTACT INFO"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"CONTACT INFO"}</h2>
         
         <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
         <a href="tel:+977 9840308107" target="_blank" style="color:white; font-weight:bold">+977 9840308107</a>
@@ -271,8 +271,8 @@ const cardContent = [
   {
     title: "SOCIALS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"SOCIALS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"SOCIALS"}</h2>
         
         <div class="glide-box"><i class="fab fa-facebook"></i> Facebook : 
         <a href="https://www.facebook.com/innu.upreti" target="_blank" style="color:white; font-weight:bold">Stuti Upreti</a>
@@ -299,8 +299,8 @@ const cardContent = [
   {
     title: "COURSES AND CERTIFICATION",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"COURSES AND CERTIFICATION"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"COURSES AND CERTIFICATION"}</h2>
 
          <div class="glide-box" style="height : 80px">Flutter Development : 45 hours Training program
                                 <br>
@@ -325,8 +325,8 @@ const cardContent = [
   {
     title: "HOBBIES AND INTERESTS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:rgb(4, 4, 55) font-size:100%">${"HOBBIES AND INTERESTS"}</h2>
+      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+        <h2 style="color:rgb(4, 4, 55); font-size:100%">${"HOBBIES AND INTERESTS"}</h2>
         
         <div class="glide-box" style="height : 80px">Creating Fun And Personal Coding Projects 💻</div>
          <div class="glide-box" style="height : 80px">Travel of any form and anywhere 🏕️</div>
@@ -400,7 +400,7 @@ cardEl.forEach((card, index) => {
                                     
                                     
                                     
-                                    <button class = "glide-btn">SHOW</button>
+                                    <button class = "glide-btn" style="margin:auto">SHOW</button>
                                 </div>`;
       unlockCard(card, index);
       console.log("card has been opened already");
