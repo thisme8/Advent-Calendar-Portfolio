@@ -13,8 +13,8 @@ body {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 10px;
   }
 
   p {
@@ -47,9 +47,24 @@ body {
 
   .catalogue-container {
     overflow: auto;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
+  }
+
+  .card {
+    height: 30vh;
+    width: 80%;
+    background-color: rgba(255, 238, 217, 0.443);
+    margin: 5% auto 5% 15%;
+    padding: 5% 5%;
+    border-radius: 2%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    transition: transform 0.3s ease all;
+    transform: rotateY(0deg);
   }
 }
 
@@ -66,7 +81,7 @@ body {
   }
 
   .footer-container {
-    height: 3vh;
+    height: 5vh;
   }
 }
 
@@ -78,13 +93,18 @@ body {
 
   .card-container {
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 90%;
   }
 
   .footer-container {
-    height: 5vh;
+    height: 3vh;
+    padding: 5px 0;
   }
 }
+
+/* --------------------------------------------------------------------------Base CSS------------------------------------------------------------------------------------------------------- */
 
 h1 {
   font-family: cursive;
