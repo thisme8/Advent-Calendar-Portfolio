@@ -7,7 +7,7 @@ function advent() {
   //to set time-alert message to original state
   let messageOriginal = `<div>
                             <img src= "src/img/img18.png"
-                                style = "height:50px; width:50px; border-radius:50%"
+                                style = "height:3.2em; width:3.2em; border-radius:50%"
                             >
                            </div>`;
   localStorage.setItem("messageOriginal", messageOriginal);
@@ -16,7 +16,7 @@ function advent() {
     messageEl.innerHTML = `<p>Click the first card to initialize the Calendar 🗓️</p>`;
     setTimeout(() => {
       messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
-    }, 4000);
+    }, 5000);
   } else {
     messageEl.innerHTML = `<div>
                             <img src= "src/img/img18.png"
@@ -39,7 +39,7 @@ function advent() {
   });
   setTimeout(() => {
     timeEl.innerHTML = `${localStorage.getItem("original")}`;
-  }, 4000);
+  }, 5000);
 }
 advent();
 
@@ -344,7 +344,7 @@ cardEl.forEach((card, index) => {
   //   for locking and unlocking card without event listener
   function checkAndUnlock() {
     let currentTime = Date.now();
-    let coolDownTime = index * 30 * 1000;
+    let coolDownTime = index * 10 * 1000;
     let elapsedTime =
       currentTime - JSON.parse(localStorage.getItem("lastOpenTime0"));
 
@@ -411,7 +411,7 @@ cardEl.forEach((card, index) => {
       let lastOpenTime = JSON.parse(
         localStorage.getItem("lastOpenTime0") || "0"
       );
-      let coolDownTime = index * 30 * 1000;
+      let coolDownTime = index * 10 * 1000;
 
       let elapsedTime = currentTime - lastOpenTime;
 
@@ -483,11 +483,11 @@ cardEl.forEach((card, index) => {
               messageEl.innerHTML = `${localStorage.getItem(
                 "messageOriginal"
               )}`;
-            }, 4000);
+            }, 5000);
 
             setTimeout(() => {
               timeEl.innerHTML = `${localStorage.getItem("original")}`;
-            }, 4000);
+            }, 5000);
           } else {
             // time-alert message to wait for the coolDown time to pass before the locked card is unlocked
             messageEl.innerHTML = `Please wait ${remainingTime} more seconds(s) to open card ${index} with<p style="color:rgb(4, 4, 55); font-weight:bold">${selectedContent.title}</p>
@@ -501,13 +501,13 @@ cardEl.forEach((card, index) => {
               messageEl.innerHTML = `${localStorage.getItem(
                 "messageOriginal"
               )}`;
-            }, 4000);
+            }, 5000);
 
             timeEl.innerHTML = `Click here to collapse the time-keeping and unlock all cards 
                                 <div><i class="fas fa-clock fa-3x"></i></div>`;
             setTimeout(() => {
               timeEl.innerHTML = `${localStorage.getItem("original")}`;
-            }, 4000);
+            }, 5000);
           }
         }
       }
@@ -555,7 +555,7 @@ cardEl.forEach((card, index) => {
   // to set the time-alert message to its original state after 5 seconds
   setTimeout(() => {
     messageEl.innerHTML = `${localStorage.getItem("messageOriginal")}`;
-  }, 4000);
+  }, 5000);
 });
 
 let reAdventEl = document.getElementById("re-advent-btn");
