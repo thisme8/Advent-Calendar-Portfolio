@@ -34,16 +34,19 @@ body {
   }
 
   #alert-message {
+    margin-right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
 
   #time-btn {
+    margin-right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
 
   #re-advent-message {
+    margin-right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
