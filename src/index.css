@@ -13,15 +13,12 @@ body {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 10px;
   }
 
-  p {
-    font-size: 12px;
-    text-align: justify;
-  }
   .card-container {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
@@ -34,22 +31,29 @@ body {
   }
 
   #alert-message {
-    top: 20px;
-    right: 10px;
+    top: 5px;
+    right: 0px;
     font-size: 5px;
-    padding: 3px 5px;
+    padding: 3px 3px;
+  }
+
+  #time-btn {
+    top: 30px;
+    right: 0px;
+    font-size: 5px;
+    padding: 3px 3px;
+  }
+
+  #alert-message {
+    bottom: 5px;
+    right: 0px;
+    font-size: 5px;
+    padding: 3px 3px;
   }
 
   .footer-container {
     height: 3vh;
     padding: 5px 0;
-  }
-
-  .catalogue-container {
-    overflow: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
   }
 }
 
@@ -66,7 +70,7 @@ body {
   }
 
   .footer-container {
-    height: 3vh;
+    height: 5vh;
   }
 }
 
@@ -78,13 +82,18 @@ body {
 
   .card-container {
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 90%;
   }
 
   .footer-container {
-    height: 5vh;
+    height: 3vh;
+    padding: 5px 0;
   }
 }
+
+/* --------------------------------------------------------------------------Base CSS------------------------------------------------------------------------------------------------------- */
 
 h1 {
   font-family: cursive;
@@ -113,6 +122,18 @@ p {
   top: 0%;
   left: 0%;
   right: 0%;
+  display: flex;
+}
+
+.logo-img {
+  text-wrap: wrap;
+  border-radius: 50%;
+  border-color: rgb(4, 4, 55);
+  border-width: 2px;
+  opacity: 1;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #alert-message {
@@ -426,9 +447,9 @@ p {
 
 /* --------------------------------------------------------------------------GAMES------------------------------------------------------------------------------------------------------- */
 .catalogue-container {
-  position: relative;
+  position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   row-gap: 5%;
   text-align: center;
@@ -437,6 +458,7 @@ p {
   height: 45vh;
   padding: 7px 0;
   background-size: cover;
+  border-top: 2px solid rgba(255, 238, 217, 0.443);
   padding: 0;
   transition: background-color 0.3s ease all;
   flex: 2;
@@ -460,7 +482,6 @@ p {
   border-radius: 2px;
   background-attachment: fixed;
   font-size: 100%;
-  overflow: scroll;
 }
 
 .game-cover {
@@ -519,10 +540,10 @@ p {
   text-align: center;
   width: 100vw;
   height: 5vh;
+  top: 45vh;
   padding: 5px 0;
-  bottom: 0px;
   background-color: rgba(255, 238, 217, 0.443);
   background-size: contain;
-  flex-shrink: 0;
+  flex: 3;
   /* background-attachment: fixed; */
 }
