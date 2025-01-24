@@ -20,7 +20,7 @@ function advent() {
   } else {
     messageEl.innerHTML = `<div>
                             <img src= "src/img/img18.png"
-                                style = "height:50px; width:50px; border-radius:50%"
+                                style = "height:3.2em; width:3.2em; border-radius:50%"
                             >
                            </div>`;
   }
