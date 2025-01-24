@@ -13,6 +13,17 @@ body {
     font-size: 15px;
     margin-top: 10px;
   }
+  .game-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 15vh;
+    column-gap: 7vw;
+    width: 90%;
+    height: 20%;
+    overflow: hidden;
+  }
 }
 
 h1 {
