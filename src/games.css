@@ -8,6 +8,8 @@ body {
   background-position: center;
 }
 
+/* --------------------------------------------------------------------------small screen media query------------------------------------------------------------------------------------------------------- */
+
 @media (max-width: 600px) {
   h1 {
     font-size: 15px;
@@ -20,9 +22,25 @@ body {
     align-items: center;
     row-gap: 15vh;
     column-gap: 7vw;
-    width: 90%;
+    width: 70%;
     height: 20%;
     overflow: hidden;
+  }
+
+  .game-card {
+    height: 95%;
+    width: 80%;
+    border-radius: 7px;
+    background-color: rgba(250, 235, 215, 0.557);
+    color: black;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image {
+    height: 90%;
+    width: 90%;
+    object-fit: fill;
   }
 }
 
@@ -203,6 +221,11 @@ form {
   &.img-iv {
     background-image: url("img/game4.png");
     background-repeat: no-repeat;
+  }
+
+  .footer-container {
+    height: 3vh;
+    padding: 5px 0;
   }
 }
 
