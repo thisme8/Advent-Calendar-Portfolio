@@ -13,7 +13,7 @@ body {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 15px;
+    font-size: 10px;
     margin-top: 10px;
   }
 
@@ -24,6 +24,7 @@ body {
     gap: 15px;
     width: 90%;
   }
+
   .card {
     height: 20vh;
     width: 90%;
@@ -31,26 +32,41 @@ body {
   }
 
   #alert-message {
-    top: 5px;
-    right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
 
   #time-btn {
-    top: 30px;
-    right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
 
   #alert-message {
-    bottom: 5px;
-    right: 0px;
     font-size: 5px;
     padding: 3px 3px;
   }
 
+  .catalogue-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5%;
+  }
+
+  .game-card {
+    height: 75%;
+    width: 350%;
+  }
+
+  .game-cover-back {
+    height: 100%;
+    min-height: 45vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
   .footer-container {
     height: 3vh;
     padding: 5px 0;
@@ -451,7 +467,7 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  row-gap: 5%;
+  column-gap: 1%;
   text-align: center;
   align-content: center;
   width: 100vw;
