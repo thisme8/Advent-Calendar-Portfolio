@@ -11,17 +11,22 @@ body {
   background-position: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   h1 {
-    font-size: 12px;
+    font-size: 20px;
     margin-top: 5px;
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
     text-align: justify;
   }
-
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+  }
   .card {
     height: 20vh;
     width: 90%;
@@ -31,13 +36,20 @@ body {
   #alert-message {
     top: 20px;
     right: 10px;
-    font-size: 10px;
-    padding: 5px 10px;
+    font-size: 5px;
+    padding: 3px 5px;
   }
 
   .footer-container {
-    height: 10vh;
-    padding: 10px 0;
+    height: 3vh;
+    padding: 5px 0;
+  }
+
+  .catalogue-container {
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
@@ -50,16 +62,17 @@ body {
   .card-container {
     flex-direction: row;
     gap: 15px;
+    flex-wrap: wrap;
   }
 
   .footer-container {
-    height: 6vh;
+    height: 3vh;
   }
 }
 
 @media (orientation: portrait) {
   h1 {
-    font-size: 35px;
+    font-size: 15px;
     margin-top: 10px;
   }
 
@@ -69,7 +82,7 @@ body {
   }
 
   .footer-container {
-    height: 8vh;
+    height: 5vh;
   }
 }
 
@@ -427,7 +440,6 @@ p {
   padding: 0;
   transition: background-color 0.3s ease all;
   flex: 2;
-  overflow: scroll;
 }
 
 /* .catalogue-container:hover {
@@ -442,12 +454,13 @@ p {
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 40px;
+  margin-left: 2%;
   margin-right: auto;
   padding: 20px 20px;
   border-radius: 2px;
   background-attachment: fixed;
   font-size: 100%;
+  overflow: scroll;
 }
 
 .game-cover {
@@ -498,6 +511,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .footer-container {
