@@ -1,6 +1,7 @@
 let cardEl = document.querySelectorAll(".card");
 let messageEl = document.getElementById("alert-message");
 let timeEl = document.getElementById("time-btn");
+let introEl = document.querySelector(".intro");
 
 //function for recording rendering time
 function advent() {
@@ -40,6 +41,33 @@ function advent() {
   setTimeout(() => {
     timeEl.innerHTML = `${localStorage.getItem("original")}`;
   }, 5000);
+
+  introEl.innerHTML = `<div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-items:center">
+                        <div>
+                          <img class="logo-img" src="src/img/logo.ico" alt="Logo">
+                        </div>
+                        <div>
+                        <div class="intro-text">
+                          Hey There!!
+                          <br>
+                          My name is <span style="color: rgb(4, 4, 55); font-weight:bolder; font-size:larger" >Stuti Upreti🌻</span>, an aspiring 
+                          <span style="color: rgb(4, 4, 55); font-weight:bolder; font-size:larger" >Computer Engineer</span>
+                          <br>
+                          And right now, you are visiting my 
+                          <br>
+                          <span style="color: rgb(4, 4, 55); font-weight:bolder; font-size:larger" >Advent Calendar Portfolio!</span>
+                          <br>
+                          Behind each door lies a unique chapter of my journey. 
+                          Explore my projects, skills, and creative adventures—a tile at a time!"
+                          <br>
+                          <br>
+                          I hope you enjoy your time here—whether you're getting to know me or 
+                          <br>
+                          taking a moment to play some fun games.
+                        </div>
+                  
+                        </div>
+                      </div>`;
 }
 advent();
 
@@ -77,7 +105,7 @@ const cardContent = [
   {
     title: "INTRODUCTION",
     layout: `
-      <div  style="display: flex; flex-direction: column; align-items: center; font-size:100%;">
+      <div  style="display: flex; flex-direction: column; align-items: center; ;">
         <h2 style="color:rgb(4, 4, 55);">${"INTRODUCTION"}</h2>
         <div class="glide-box">Name: Stuti Upreti</div>
         <br>
@@ -94,7 +122,7 @@ const cardContent = [
   {
     title: "ALMA MATER",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"ALMA MATER"}</h2>
         <ul style="text-align:center; margin:5px">
           <li class="glide-box">Himalaya College Of Engineering (2021-2025)</li>
@@ -110,7 +138,7 @@ const cardContent = [
   {
     title: "SKILLS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"SKILLS"}</h2>
         
           <div class="glide-box">Python</div>
@@ -128,7 +156,7 @@ const cardContent = [
   {
     title: "TOOLS AND FRAMEWORKS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"TOOLS AND FRAMEWORKS"}</h2>
 
           <div class="glide-box">MongoDB</div>
@@ -146,7 +174,7 @@ const cardContent = [
   {
     title: "SOFT SKILLS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"SOFT SKILLS"}</h2>
       
          <div class="glide-box">Creativity</div>
@@ -162,7 +190,7 @@ const cardContent = [
   {
     title: " RELEVANT PROJECTS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"RELEVANT PROJECTS"}</h2>
         
        
@@ -199,13 +227,13 @@ const cardContent = [
                                 </a>
                                 <p>Vanilla Javascript, HTML, CSS</p>
                                 <p>Personal portfolio designed as an interactive advent calendar</p>
-        </div>
+        </h1>
       </div>`,
   },
   {
     title: "RESUME",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"RESUME"}</h2>
         
         <iframe src="src/resume.pdf" type="pdf" width="500px" height="550px"></iframe>
@@ -214,7 +242,7 @@ const cardContent = [
   {
     title: "KONAMI CODE",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"KONAMI CODE"}</h2>
         
         <div class="glide-box"><i class="fa fa-arrow-up"></i>   <i class="fa fa-arrow-up"></i></div>
@@ -243,7 +271,7 @@ const cardContent = [
   {
     title: "CONTACT INFO",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"CONTACT INFO"}</h2>
         
         <div class="glide-box"><i class="fas fa-phone"></i> Contact No : 
@@ -271,7 +299,7 @@ const cardContent = [
   {
     title: "SOCIALS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"SOCIALS"}</h2>
         
         <div class="glide-box"><i class="fab fa-facebook"></i> Facebook : 
@@ -299,7 +327,7 @@ const cardContent = [
   {
     title: "COURSES AND CERTIFICATION",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"COURSES AND CERTIFICATION"}</h2>
 
          <div class="glide-box" style="height : 80px">Flutter Development : 45 hours Training program
@@ -325,7 +353,7 @@ const cardContent = [
   {
     title: "HOBBIES AND INTERESTS",
     layout: `
-      <div style="display: flex; flex-direction: column; align-items: center; font-size:100%">
+      <div style="display: flex; flex-direction: column; align-items: center; ">
         <h2 style="color:rgb(4, 4, 55);">${"HOBBIES AND INTERESTS"}</h2>
         
         <div class="glide-box" style="height : 80px">Creating Fun And Personal Coding Projects 💻</div>
@@ -423,7 +451,7 @@ cardEl.forEach((card, index) => {
         cardBackEl.innerHTML = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
                                     <p style="
                                         color: rgb(4, 4, 55); 
-                                        font-size:100%
+                                        
                                         font-weight: bold; 
                                         font-family: Arial, sans-serif;">
                                         ${selectedContent.title}
